@@ -13,3 +13,31 @@ document.addEventListener("DOMContentLoaded", function() {
         form.reset();
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Check localStorage for a saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-mode');
+        themeToggle.textContent = '☀️ Light Mode';
+    }
+
+    themeToggle.addEventListener('click', function() {
+        body.classList.toggle('dark-mode');
+        
+        // Save the current preference and update button text
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+            themeToggle.textContent = '☀️ Light Mode';
+        } else {
+            localStorage.setItem('theme', 'light');
+            themeToggle.textContent = '🌙 Night Mode';
+        }
+    });
+
+    // Your existing form code remains here
+    const form = document.querySelector("form");
+    /* ... existing submit listener ... */
+});

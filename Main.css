@@ -1,328 +1,352 @@
-    /* MAIN.CSS */ 
-        * {
-            margin: 10px;
-            padding: 0px;
-            box-sizing: border-box;
-        }
+    /* MAIN.CSS */
+    :root {
+        --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        --text-color: #333;
+        --main-bg: white;
+        --box-bg: #f8f9fa;
+        --border-color: #7a0000;
+        --article-bg: #fff3cd;
+        --htext-color: #7a0000;
+        --text2-color: #2c3e50;
+    }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
-        }
+    body.dark-mode {
+        --bg-gradient: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
+        --text-color: #f0f0f0;
+        --main-bg: #1e1e1e;
+        --box-bg: #2d2d2d;
+        --border-color: #ff4d4d;
+        --article-bg: #3e3e3e;
+        --htext-color: #ff4d4d;
+        --text2-color: #ecf0f1;
+    }
 
-        /* Container for main content with max-width for readability */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+    * {
+        margin: 10px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
 
-        /* HEADER STYLING */
-        header {
-            background: linear-gradient(135deg, #7790ff 0%, #1d2cff 100%);
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background: var(--bg-gradient);
+        min-height: 100vh;
+        transition: all 0.3s ease;
+    }
 
-        
+    /* Container for main content with max-width for readability */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* HEADER STYLING */
+    header {
+        background: linear-gradient(135deg, #7790ff 0%, #1d2cff 100%);
+        color: white;
+        text-align: center;
+        padding: 60px 20px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+
+
+    header h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+    }
+
+    header p {
+        font-size: 1.2em;
+        opacity: 0.9;
+    }
+
+    /* NAVIGATION STYLING */
+    nav {
+        background: #304262;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 12px 20px;
+        background: #3f507c;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        display: block;
+    }
+
+    nav a:hover {
+        background: #588dff;
+        transform: translateY(-2px);
+    }
+
+    /* MAIN CONTENT AREA */
+    main {
+        background: var(--main-bg);
+        border-radius: 10px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* SECTION STYLING */
+    section {
+        margin-bottom: 50px;
+        padding-bottom: 30px;
+        border-bottom: 2px solid #ecf0f1;
+    }
+
+    section:last-child {
+        border-bottom: none;
+    }
+
+    section h2 {
+        color: var(--htext-color);
+        font-size: 2em;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid #000000;
+    }
+
+    /* ARTICLE STYLING */
+    article {
+        background: var(--box-bg);
+        padding: 25px;
+        margin: 20px 0;
+        border-radius: 8px;
+        border-left: 4px solid var(--border-color);
+        color: var(--text-color)
+    }
+
+    article h3 {
+        color: var(--htext-color);
+        margin-bottom: 10px;
+    }
+
+    /* ASIDE STYLING */
+    aside {
+        background: var(--article-bg);
+        padding: 25px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        border-left: 5px solid #ffc107;
+    }
+
+    aside h2 {
+        color: #856404;
+        border-bottom-color: #ffc107;
+    }
+
+    /* FORM STYLING */
+    form {
+        background: var(--box-bg);
+        padding: 30px;
+        border-radius: 8px;
+        margin: 20px 0;
+    }
+
+    fieldset {
+        border: 2px solid var(--border-color);
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+    }
+
+    legend {
+        font-weight: bold;
+        color: var(--htext-color);
+        padding: 0 10px;
+        font-size: 1.1em;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 600;
+        color: var(--text2-color);
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #bdc3c7;
+        border-radius: 4px;
+        font-size: 1em;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        width: auto;
+        margin-right: 5px;
+    }
+
+    button {
+        background: #5078c2;
+        color: white;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        margin-right: 10px;
+        transition: background 0.3s;
+    }
+
+    button:hover {
+        background: #5568d3;
+    }
+
+    button[type="reset"] {
+        background: #95a5a6;
+    }
+
+    button[type="reset"]:hover {
+        background: #7f8c8d;
+    }
+
+    /* TABLE STYLING */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background: white;
+    }
+
+    caption {
+        font-size: 1.2em;
+        font-weight: bold;
+        padding: 10px;
+        color: var(--text-color);
+        caption-side: top;
+    }
+
+    td {
+        color: var(--text-color)
+    }
+
+    th,
+    td {
+        padding: 15px;
+        text-align: left;
+        border: 1px solid var(--section-border);
+        color: var(--text-color)
+    }
+
+    th {
+        background: #7a0000;
+        color: white;
+        font-weight: bold;
+    }
+
+    tbody tr:nth-child(even) {
+        background: var(--box-bg);
+    }
+
+    tbody tr:nth-child(odd) {
+        background: var(--main-bg);
+    }
+
+    tfoot {
+        background: var(--box-bg);
+        font-weight: bold;
+    }
+
+    /* MULTIMEDIA STYLING */
+    figure {
+        margin: 25px 0;
+        text-align: center;
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    figure img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    figcaption {
+        margin-top: 15px;
+        font-style: italic;
+        color: #666;
+    }
+
+    video,
+    audio {
+        width: 100%;
+        margin: 15px 0;
+        border-radius: 5px;
+    }
+
+    /* FOOTER STYLING */
+    footer {
+        background: #2c3e50;
+        color: white;
+        padding: 30px;
+        text-align: center;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+
+    footer a {
+        color: #667eea;
+    }
+
+    /* UTILITY CLASSES */
+    .highlight {
+        background: #fff3cd;
+        padding: 2px 6px;
+        border-radius: 3px;
+    }
+
+    details {
+        background: var(--box-bg);
+        padding: 15px;
+        border-radius: 5px;
+        margin: 15px 0;
+    }
+
+    summary {
+        cursor: pointer;
+        font-weight: bold;
+        color: var(--text-color);
+        padding: 10px;
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 768px) {
+        nav ul {
+            flex-direction: column;
+        }
 
         header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-size: 1.8em;
         }
 
-        header p {
-            font-size: 1.2em;
-            opacity: 0.9;
-        }
-
-        /* NAVIGATION STYLING */
-        nav {
-            background: #304262;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 12px 20px;
-            background: #3f507c;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-            display: block;
-        }
-
-        nav a:hover {
-            background: #588dff;
-            transform: translateY(-2px);
-        }
-
-        /* MAIN CONTENT AREA */
-        main {
-            background: white;
-            border-radius: 10px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        /* SECTION STYLING */
-        section {
-            margin-bottom: 50px;
-            padding-bottom: 30px;
-            border-bottom: 2px solid #ecf0f1;
-        }
-
-        section:last-child {
-            border-bottom: none;
-        }
-
-        section h2 {
-            color: #7a0000;
-            font-size: 2em;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #000000;
-        }
-
-        /* ARTICLE STYLING */
-        article {
-            background: #f8f9fa;
-            padding: 25px;
-            margin: 20px 0;
-            border-radius: 8px;
-            border-left: 4px solid #7a0000;
-        }
-
-        article h3 {
-            color: #7a0000;
-            margin-bottom: 10px;
-        }
-
-        /* ASIDE STYLING */
-        aside {
-            background: #fff3cd;
-            padding: 25px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            border-left: 5px solid #ffc107;
-        }
-
-        aside h2 {
-            color: #856404;
-            border-bottom-color: #ffc107;
-        }
-
-        /* FORM STYLING */
-        form {
-            background: #ecf0f1;
-            padding: 30px;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-
-        fieldset {
-            border: 2px solid #bdc3c7;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-        }
-
-        legend {
-            font-weight: bold;
-            color: #7a0000;
-            padding: 0 10px;
-            font-size: 1.1em;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 600;
-            color: #2c3e50;
-        }
-
-        input,
-        select,
-        textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #bdc3c7;
-            border-radius: 4px;
-            font-size: 1em;
-        }
-
-        input[type="radio"],
-        input[type="checkbox"] {
-            width: auto;
-            margin-right: 5px;
-        }
-
-        button {
-            background: #5078c2;
-            color: white;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            margin-right: 10px;
-            transition: background 0.3s;
-        }
-
-        button:hover {
-            background: #5568d3;
-        }
-
-        button[type="reset"] {
-            background: #95a5a6;
-        }
-
-        button[type="reset"]:hover {
-            background: #7f8c8d;
-        }
-
-        /* TABLE STYLING */
         table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background: white;
+            font-size: 0.9em;
         }
-
-        caption {
-            font-size: 1.2em;
-            font-weight: bold;
-            padding: 10px;
-            color: #2c3e50;
-            caption-side: top;
-        }
-
-        th,
-        td {
-            padding: 15px;
-            text-align: left;
-            border: 1px solid #ddd;
-        }
-
-        th {
-            background: #7a0000;
-            color: white;
-            font-weight: bold;
-        }
-
-        tbody tr:nth-child(even) {
-            background: #f8f9fa;
-        }
-
-        tbody tr:hover {
-            background: #e9ecef;
-        }
-
-        tfoot {
-            background: #ecf0f1;
-            font-weight: bold;
-        }
-
-        /* MULTIMEDIA STYLING */
-        figure {
-            margin: 25px 0;
-            text-align: center;
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        figure img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        figcaption {
-            margin-top: 15px;
-            font-style: italic;
-            color: #666;
-        }
-
-        video,
-        audio {
-            width: 100%;
-            margin: 15px 0;
-            border-radius: 5px;
-        }
-
-        /* FOOTER STYLING */
-        footer {
-            background: #2c3e50;
-            color: white;
-            padding: 30px;
-            text-align: center;
-            border-radius: 8px;
-            margin-top: 30px;
-        }
-
-        footer a {
-            color: #667eea;
-        }
-
-        /* UTILITY CLASSES */
-        .highlight {
-            background: #fff3cd;
-            padding: 2px 6px;
-            border-radius: 3px;
-        }
-
-        details {
-            background: #e9ecef;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 15px 0;
-        }
-
-        summary {
-            cursor: pointer;
-            font-weight: bold;
-            color: #7a0000;
-            padding: 10px;
-        }
-
-        summary:hover {
-            background: #dee2e6;
-            border-radius: 5px;
-        }
-
-        /* RESPONSIVE DESIGN */
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-            }
-
-            header h1 {
-                font-size: 1.8em;
-            }
-
-            table {
-                font-size: 0.9em;
-            }
-        }
+    }
