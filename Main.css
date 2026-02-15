@@ -20,7 +20,13 @@
         --htext-color: #ff4d4d;
         --text2-color: #ecf0f1;
     }
-    
+
+    .nav-link {
+        color: white;
+        background-color: #3f507c;
+        margin: 0 5px;
+        border-radius: 5px;
+    }
 
 
 
