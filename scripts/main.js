@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
             themeToggle.textContent = '☀️ Light Mode';
         } else {
             localStorage.setItem('theme', 'light');
-            themeToggle.textContent = '🌙 Night Mode';
+            themeToggle.textContent = '🌙 Dark Mode';
         }
     });
 
