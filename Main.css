@@ -21,13 +21,6 @@
         --text2-color: #ecf0f1;
     }
 
-    .nav-link {
-        color: white;
-        background-color: #3f507c;
-        margin: 0 5px;
-        border-radius: 5px;
-    }
-
 
 
     * {
@@ -76,6 +69,28 @@
     }
 
     /* NAVIGATION STYLING */
+    .nav-link {
+        color: white;
+        background-color: #3f507c;
+        margin: 0 5px;
+        border-radius: 5px;
+    }
+
+    @media (max-width: 991px) {
+        .navbar {
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        .navbar-collapse {
+            background-color: var(--bg-color);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+        }
+    }
+
     nav {
         background: #304262;
         padding: 15px;
