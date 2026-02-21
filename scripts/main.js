@@ -41,3 +41,21 @@ document.addEventListener("DOMContentLoaded", function() {
     const form = document.querySelector("form");
     /* ... existing submit listener ... */
 });
+
+const myButton = document.getElementById("backToTop");
+window.onscroll = function() {
+    scrollFunction()
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        myButton.style.display = "block";
+    } else {
+        myButton.style.display = "none";
+    }
+}
+myButton.addEventListener("click", function() {
+    window.scrollTo({
+        top: 0, behavior: 'smooth' 
+    });
+});
