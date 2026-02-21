@@ -5,15 +5,6 @@
 */
 
 document.addEventListener("DOMContentLoaded", function() {
-    const form = document.querySelector("form");
-    
-    form.addEventListener("submit", function (event) {
-        event.preventDefault();
-        alert("Thank you, I appreciate your message!");
-        form.reset();
-    });
-});
-document.addEventListener("DOMContentLoaded", function() {
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
 
@@ -58,4 +49,23 @@ myButton.addEventListener("click", function() {
     window.scrollTo({
         top: 0, behavior: 'smooth' 
     });
+});
+
+const contactForm = document.getElementById("contactForm");
+const statusMessage = document.getElementById("formStatus");
+
+contactForm.addEventListener("submit", function(event) {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+
+    event.preventDefault();
+
+    if (name === '' || email === '') {
+        statusMessage.textContent = "Please fill in all required fields.";
+        statusMessage.style.color = "red";
+    } else {
+        statusMessage.textContent = "Thanks, " + name + "! Message sent.";
+        statusMessage.style.color = "green";
+        contactForm.reset();
+    }
 });
