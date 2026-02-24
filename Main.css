@@ -339,6 +339,13 @@
         color: #667eea;
     }
 
+    #linkedIn {
+        background: none;
+        margin-top: 5px;
+        padding: 10px 20px;
+        font-size: smaller;
+    }
+
     /* UTILITY CLASSES */
     .highlight {
         background: #fff3cd;
